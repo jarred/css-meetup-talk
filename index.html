@@ -12,11 +12,11 @@
         <h1>Hi. I'm <a href="http://twitter.com/jarred">@jarred</a></h1><br /><br />
         <h3>Design Lead at <a href="http://atomic.systems">Atomic</a></h3>
       </section>
-      <section><center><img src="http://i.giphy.com/DaOocTrpcbflC.gif" /></center></section>
-      <section><center><img src="http://i.giphy.com/5VMNcCxVBibZK.gif" /></center></section>
       <section>
-        <h1>We’re chrome only = NO IE. Suckers.</h1>
+        <h2>We're chrome only.</h2><br /><br />
+        <center><img src="http://i.giphy.com/DaOocTrpcbflC.gif" /></center>
       </section>
+      <section><center><img src="http://i.giphy.com/5VMNcCxVBibZK.gif" /></center></section>
       <section>
         <h2>New CSS stuff that I enjoy using and that I hope you don't know about yet so that I can explain it to you and not have wasted our precious time together.</h2>
       </section>
@@ -38,49 +38,74 @@
 }
 </code></pre>
       </section>
-      <section><center><img src="https://trello-attachments.s3.amazonaws.com/542140f92240ae10df47cbe8/497x373/4a840180dc82e272e39859739e1fa09a/CSS.gif" /></center></section>
       <section>
         <h1>:not</h1>
-        <pre><code class="language-css">*:not(.naan-bread){
+        <pre><code class="language-css">.everybody:not(.naan-bread){
   top: 0;
+}</code></pre><center><img src="http://31.media.tumblr.com/7a836cbe9a359c75404f91e96e7efe9d/tumblr_mi3x3qlP5f1qgavwyo4_250.gif" /></center>
+      </section>
+      <section>
+        <h1>SVG Masks</h1>
+        <pre><code class="language-css">.thing{
+  mask: url("mask.svg");
+  -webkit-mask-image: url("mask.svg");
+}</code></pre><a href="http://codepen.io/jarred/pen/hfHcK?editors=110" target="_blank">example</a>
+      </section>
+      <section>
+        <h1>CSS Animation events</h1><br /><br />
+        <pre><code class="language-javascript">$('.js-thing').on('animationiteration', function () {
+  // do something.
+});
+</code></pre>
+      </section>
+      <section>
+        <h1>relative aspect ratios</h1>
+        <p>(There's probably a better name for this)</p>
+        <pre><code class="language-css">.thing{
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
+}</code></pre><a href="http://codepen.io/jarred/pen/BHKkx" target="_blank">example</a>
+      </section>
+      <section>
+        <h1>Flexbox</h1><center><img src="https://trello-attachments.s3.amazonaws.com/542140f92240ae10df47cbe8/497x373/4a840180dc82e272e39859739e1fa09a/CSS.gif" /></center>
+      </section>
+      <section>
+        <h2>"The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow."</h2>
+      </section>
+      <section>
+        <h2>Flexbox .containers</h2>
+        <pre><code class="language-css">.container {
+  display: flex | inline-flex;
+  flex-direction: row | row-reverse | column | column-reverse;
+  flex-wrap: nowrap | wrap | wrap-reverse;
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+  align-items: flex-start | flex-end | center | baseline | stretch;
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}</code></pre><a href="http://codepen.io/jarred/pen/zBCyb?editors=110" target="_blank">example</a>
+      </section>
+      <section>
+        <h2>Flexbox .items</h2>
+        <pre><code class="language-css">.item{
+  order: (integer);
+  flex-grow: (number); /* default 0 */
+  flex-shrink: (number); /* default 1 */
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}</code></pre><a href="http://codepen.io/jarred/pen/iDzmA" target="_blank">example</a>
+      </section>
+      <section>
+        <h2>calc()</h2>
+        <pre><code class="language-css">.item{
+  width: calc(50% - 20px);
 }
 </code></pre>
       </section>
-      <section><center><img src="http://31.media.tumblr.com/7a836cbe9a359c75404f91e96e7efe9d/tumblr_mi3x3qlP5f1qgavwyo4_250.gif" /></center></section>
+      <section><center><img src="https://trello-attachments.s3.amazonaws.com/542140f92240ae10df47cbe8/350x306/32202e5d943ac0a3ba9fc59307906b64/1i6YurbhjgbJH5c.gif" /></center></section>
       <section>
-        <h2>SVG Masks</h2>
-        <h3 class="bullet">Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a></h3>
-        <ul>
-          <li>Bullet 1</li>
-          <li>Bullet 2</li>
-          <li>Bullet 3</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Syntax Highlighting</h2>
-        <h3>Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a></h3>
-        <pre><code class="language-javascript">bespoke.from('article', [
-  classes(),
-  keys(),
-  touch(),
-  bullets('li, .bullet')
-]);
-</code></pre>
-      </section>
-      <section data-bespoke-backdrop="emphatic" class="emphatic-text">
-        <h2>Emphatic Slide!</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a></h3>
-      </section>
-      <section>
-        <h2 class="bullet">Just the beginning...</h2><br>
-        <ul>
-          <li>Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em></li>
-          <li>Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em></li>
-          <li>Edit JavaScript in <em>'src/scripts/main.js'</em></li>
-        </ul><br>
-        <ul>
-          <li><strong>Enjoy! :)</strong><a href="http://twitter.com/markdalgleish"> -@markdalgleish</a></li>
-        </ul>
+        <h1>Thanks.</h1>
+        <p><a href="http://twitter.com/jarred">@jarred</a></p>
+        <p><a href="http://atomic.systems">http://atomic.systems</a></p>
       </section>
     </article>
     <script src="build/build.js"></script>
